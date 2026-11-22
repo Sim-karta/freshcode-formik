@@ -1,6 +1,7 @@
 import { Formik } from "formik";
 import * as yup from "yup";
 import Input from "../../../entities/Input/Input";
+import styles from "./LoginForm.module.scss";
 
 const USER_VALIDATION_SCHEMA = yup.object({
     email: yup
@@ -26,6 +27,14 @@ const LoginForm = () => {
         formikBag.resetForm();
     };
 
+    const classes = {
+        field: styles.field,
+        error: styles.error,
+        input: styles.input,
+        valid: styles.valid,
+        invalid: styles.invalid,
+    };
+
     return (
         <Formik
             initialValues={userInitialValues}
@@ -34,12 +43,16 @@ const LoginForm = () => {
         >
             {(formikProps) => {
                 return (
-                    <form onSubmit={formikProps.handleSubmit}>
+                    <form
+                        className={styles.form}
+                        onSubmit={formikProps.handleSubmit}
+                    >
                         <Input
                             label="Email:"
                             type="email"
                             name="email"
                             placeholder="Email"
+                            classes={classes}
                             autoFocus
                         />
                         <Input
@@ -47,8 +60,11 @@ const LoginForm = () => {
                             type="password"
                             name="password"
                             placeholder="Password"
+                            classes={classes}
                         />
-                        <button type="submit">Login</button>
+                        <button className={styles.submit} type="submit">
+                            Login
+                        </button>
                     </form>
                 );
             }}

@@ -63,7 +63,7 @@ const SignForm = () => {
             {(formikProps) => {
                 return (
                     <form
-                        className={styles.form}
+                        className={`${styles.form} ${styles.signForm}`}
                         onSubmit={formikProps.handleSubmit}
                         noValidate
                     >

@@ -3,6 +3,7 @@ import MainLayout from "../layouts/mainLayout/MainLayout";
 import HomePage from "../../pages/home/ui/HomePage";
 import LoginPage from "../../pages/login/LoginPage";
 import SignPage from "../../pages/sign/SignPage";
+import NotFoundPage from "../../pages/notFound/NotFoundPage";
 
 export const router = createBrowserRouter([
     {
@@ -21,5 +22,9 @@ export const router = createBrowserRouter([
                 element: <SignPage />,
             },
         ],
+    },
+    {
+        path: "*",
+        element: <NotFoundPage />,
     },
 ]);

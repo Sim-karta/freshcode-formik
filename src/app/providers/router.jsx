@@ -1,9 +1,30 @@
-import { createBrowserRouter } from 'react-router-dom'
-import { HomePage } from '../../pages/home/ui/HomePage'
+import { createBrowserRouter } from "react-router-dom";
+import MainLayout from "../layouts/mainLayout/MainLayout";
+import HomePage from "../../pages/home/ui/HomePage";
+import LoginPage from "../../pages/login/LoginPage";
+import SignPage from "../../pages/sign/SignPage";
+import NotFoundPage from "../../pages/notFound/NotFoundPage";
 
 export const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <HomePage />,
-  },
-])
+    {
+        element: <MainLayout />,
+        children: [
+            {
+                path: "/",
+                element: <HomePage />,
+            },
+            {
+                path: "/login",
+                element: <LoginPage />,
+            },
+            {
+                path: "/sign",
+                element: <SignPage />,
+            },
+        ],
+    },
+    {
+        path: "*",
+        element: <NotFoundPage />,
+    },
+]);

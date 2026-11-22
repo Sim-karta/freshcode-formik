@@ -1,0 +1,47 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem 0.5rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.authWrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.loginBtn,
+.signBtn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-dark);
+    border-radius: 1rem;
+    transition-duration: var(--transition-duration);
+    cursor: pointer;
+}
+
+.loginBtn {
+    background-color: var(--color-light);
+
+    &:hover {
+        color: var(--color-light);
+        background-color: var(--color-dark);
+    }
+}
+
+.signBtn {
+    color: var(--color-light);
+    background-color: var(--color-dark);
+
+    &:hover {
+        color: var(--color-dark);
+        background-color: var(--color-light);
+    }
+}

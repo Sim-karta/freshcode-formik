@@ -1,5 +1,5 @@
-import Header from "../../../widgets/header/Header";
+const HomePage = () => {
+    return <div>HomePage</div>;
+};
 
-export function HomePage() {
-    return <Header />;
-}
+export default HomePage;

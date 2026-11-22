@@ -46,6 +46,7 @@ const LoginForm = () => {
                     <form
                         className={styles.form}
                         onSubmit={formikProps.handleSubmit}
+                        noValidate
                     >
                         <Input
                             label="Email:"

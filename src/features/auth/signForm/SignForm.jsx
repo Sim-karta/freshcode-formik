@@ -65,6 +65,7 @@ const SignForm = () => {
                     <form
                         className={styles.form}
                         onSubmit={formikProps.handleSubmit}
+                        noValidate
                     >
                         <Input
                             label="First name:"

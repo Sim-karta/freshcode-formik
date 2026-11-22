@@ -19,27 +19,27 @@
 .loginBtn,
 .signBtn {
     padding: 0.5rem 1rem;
-    border: 1px solid #232323;
+    border: 1px solid var(--color-dark);
     border-radius: 1rem;
-    transition-duration: 0.2s;
+    transition-duration: var(--transition-duration);
     cursor: pointer;
 }
 
 .loginBtn {
-    background-color: #f5f5f5;
+    background-color: var(--color-light);
 
     &:hover {
-        color: #f5f5f5;
-        background-color: #232323;
+        color: var(--color-light);
+        background-color: var(--color-dark);
     }
 }
 
 .signBtn {
-    color: #f5f5f5;
-    background-color: #232323;
+    color: var(--color-light);
+    background-color: var(--color-dark);
 
     &:hover {
-        color: #232323;
-        background-color: #f5f5f5;
+        color: var(--color-dark);
+        background-color: var(--color-light);
     }
 }

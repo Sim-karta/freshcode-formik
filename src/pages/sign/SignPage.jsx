@@ -1,5 +1,7 @@
+import SignForm from "../../features/auth/signForm/SignForm";
+
 const SignPage = () => {
-    return <div>SignPage</div>;
+    return <SignForm />;
 };
 
 export default SignPage;

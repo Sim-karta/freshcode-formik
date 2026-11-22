@@ -1,7 +1,7 @@
 import { Formik } from "formik";
 import * as yup from "yup";
 import Input from "../../../entities/Input/Input";
-import styles from "./LoginForm.module.scss";
+import styles from "../Form.module.scss";
 
 const USER_VALIDATION_SCHEMA = yup.object({
     email: yup

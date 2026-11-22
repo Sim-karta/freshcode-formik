@@ -1,5 +1,6 @@
 import { Formik } from "formik";
 import * as yup from "yup";
+import Input from "../../../entities/Input/Input";
 
 const USER_VALIDATION_SCHEMA = yup.object({
     email: yup
@@ -34,19 +35,17 @@ const LoginForm = () => {
             {(formikProps) => {
                 return (
                     <form onSubmit={formikProps.handleSubmit}>
-                        <input
+                        <Input
+                            label="Email:"
                             type="email"
                             name="email"
-                            value={formikProps.values.email}
-                            onChange={formikProps.handleChange}
                             placeholder="Email"
                             autoFocus
                         />
-                        <input
+                        <Input
+                            label="Password:"
                             type="password"
                             name="password"
-                            value={formikProps.values.password}
-                            onChange={formikProps.handleChange}
                             placeholder="Password"
                         />
                         <button type="submit">Login</button>

@@ -4,8 +4,18 @@ import Input from "../../../entities/Input/Input";
 import styles from "../Form.module.scss";
 
 const USER_VALIDATION_SCHEMA = yup.object({
-    firstName: yup.string().trim().min(2).max(36).required(),
-    lastName: yup.string().trim().min(2).max(36).required(),
+    firstName: yup
+        .string()
+        .trim()
+        .min(2, "Повино бути не менше 2 символів")
+        .max(36, "Повино бути не більше 36 символів")
+        .required("First name обов'язкове"),
+    lastName: yup
+        .string()
+        .trim()
+        .min(2, "Повино бути не менше 2 символів")
+        .max(36, "Повино бути не більше 36 символів")
+        .required("Last name обов'язкове"),
     email: yup
         .string()
         .trim()
@@ -18,8 +28,8 @@ const USER_VALIDATION_SCHEMA = yup.object({
         .required("Password обов'язковий"),
     passwordConf: yup
         .string()
-        .oneOf([yup.ref("password")])
-        .required(),
+        .oneOf([yup.ref("password")], "Паролі повині співпадати")
+        .required("Password confirmation обов'язкове"),
 });
 
 const SignForm = () => {

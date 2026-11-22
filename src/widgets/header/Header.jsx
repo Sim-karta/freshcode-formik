@@ -1,12 +1,19 @@
+import { NavLink } from "react-router-dom";
 import styles from "./Header.module.scss";
 
 const Header = () => {
     return (
         <header className={styles.header}>
-            <p className={styles.logo}>RegHelp</p>
+            <NavLink to="/" className={styles.logo}>
+                RegHelp
+            </NavLink>
             <div className={styles.authWrapper}>
-                <button className={styles.loginBtn}>Login</button>
-                <button className={styles.signBtn}>Sign up</button>
+                <NavLink to="/login" className={styles.loginBtn}>
+                    Login
+                </NavLink>
+                <NavLink to="/sign" className={styles.signBtn}>
+                    Sign up
+                </NavLink>
             </div>
         </header>
     );

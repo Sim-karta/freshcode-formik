@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    max-width: 1200px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.authWrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.loginBtn,
+.signBtn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #232323;
+    border-radius: 1rem;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.loginBtn {
+    background-color: #f5f5f5;
+
+    &:hover {
+        color: #f5f5f5;
+        background-color: #232323;
+    }
+}
+
+.signBtn {
+    color: #f5f5f5;
+    background-color: #232323;
+
+    &:hover {
+        color: #232323;
+        background-color: #f5f5f5;
+    }
+}
